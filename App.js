@@ -3,7 +3,7 @@ function fetchAPIExample() {
     let promiseObject = fetch("https://isro.vercel.app/api/centres");
     promiseObject
       .then((response) => response.json())
-      .then((response) => console.log("response -> ", response));
+      // .then((response) => console.log("response -> ", response));
       .then(data =>{
         const fileContent = JSON.stringify(data);
         document.getElementById("xmlData").textContent = fileContent;;
