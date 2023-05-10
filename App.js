@@ -3,26 +3,24 @@ function fetchAPIExample() {
     let promiseObject = fetch("https://isro.vercel.app/api/centres");
     promiseObject
       .then((response) => response.json())
-      // .then((response) => console.log("response -> ", response));
       .then(data =>{
-        const fileContent = JSON.stringify(data);
-        document.getElementById("xmlData").textContent = fileContent;;
+        console.log("What's inside data -> ", data);
+        //const fileContent = JSON.stringify(data);
+        //document.getElementById("xmlData").textContent = fileContent;;
+        let tableData = "";
+        data.map((eachPost) => {
+          tableData += `<tr>
+                    <td>${eachPost.name}</td>
+                    <td>${eachPost.Place}</td>
+                    <td>${eachPost.State}</td>
+                  <tr>`;
+        });
+        document.querySelector("tbody").innerHTML = tableData;
       })
       .catch(error =>{
-        console.error(error);
+        console.log(error);
       })
-
-
-      let htmlData = response.map((eachPost) => {
-        return `<tr>
-                  <td>${eachPost.name}</td>
-                  <td>${eachPost.Place}</td>
-                  <td>${eachPost.State}</td>
-                <tr>`;
-      })
-      .join("");
-            document.querySelector("tbody").innerHTML = htmlData;
-            document.querySelector("#loadBtn").style.display = "none";
+            
   }
 
 
