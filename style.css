@@ -1,0 +1,27 @@
+.container{
+    border: 5px solid black;
+    align-items: center;
+}
+.search-ISRO{
+    border: 1px transparent;
+    border-radius: 10px;
+    color: azure;
+    background-color: blue;
+    width: auto;
+    align-items: center;
+    text-align: center;
+}
+.logo{
+    text-align: center;
+}
+.searchBar{
+    align-items: center;
+    width: 100%;
+
+}
+#search{
+    width: 77%;
+}
+.head{
+    text-align: center;
+}

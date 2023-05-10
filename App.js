@@ -3,16 +3,16 @@ function fetchAPIExample() {
     let promiseObject = fetch("https://isro.vercel.app/api/centres");
     promiseObject
       .then((response) => response.json())
-      .then(data =>{
+      .then((data) =>{
         console.log("What's inside data -> ", data);
-        //const fileContent = JSON.stringify(data);
-        //document.getElementById("xmlData").textContent = fileContent;;
+        const fileContent = JSON.stringify(data);
+        document.getElementById("xmlData").textContent = fileContent;;
         let tableData = "";
-        data.map((eachPost) => {
+        fileContent.map((values) => {
           tableData += `<tr>
-                    <td>${eachPost.name}</td>
-                    <td>${eachPost.Place}</td>
-                    <td>${eachPost.State}</td>
+                    <td scope="col">${values.name}</td>
+                    <td scope="col">${values.Place}</td>
+                    <td scope="col">${values.State}</td>
                   <tr>`;
         });
         document.querySelector("tbody").innerHTML = tableData;
