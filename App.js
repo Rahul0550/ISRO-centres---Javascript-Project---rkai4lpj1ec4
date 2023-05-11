@@ -10,22 +10,23 @@ function fetchAPIExample() {
     promiseObject
       .then((response) => response.json())
       .then((data) =>{
-        console.log("What's inside data -> ", data);
+        // console.log("What's inside data -> ", data);
     
         let filteredData = data.centres.filter((result) => {
-          return result.name.toLowerCase().includes(searchText) && 
-            (showCity && result.Place.toLowerCase().includes(searchText)) || 
-            (showState && result.State.toLowerCase().includes(searchText)) || 
-            (showCenter && result.name.toLowerCase().includes(searchText));
+          let matchesName = result.name.toLowerCase().includes(searchText);
+          let matchesPlace = showCity && result.Place.toLowerCase().includes(searchText);
+          let matchesState = showState && result.State.toLowerCase().includes(searchText);
+          let matchesCenter = showCenter && result.name.toLowerCase().includes(searchText);
+          return matchesName || matchesPlace || matchesState || matchesCenter;
         });
 
         let tableData = "";
         
         filteredData.map((values) => {
           tableData += `<tr>
-                          <td scope="col">${values.name}</td>
-                          <td scope="col">${values.Place}</td>
-                          <td scope="col">${values.State}</td>
+                          <td>${values.name}</td>
+                          <td>${values.Place}</td>
+                          <td>${values.State}</td>
                         <tr>`;
         }).join()
         document.querySelector("tbody").innerHTML = tableData;
