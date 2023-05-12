@@ -10,7 +10,6 @@ function fetchAPIExample() {
     promiseObject
       .then((response) => response.json())
       .then((data) =>{
-        // console.log("What's inside data -> ", data);
     
         let filteredData = data.centres.filter((result) => {
           let matchesName = result.name.toLowerCase().includes(searchText);
