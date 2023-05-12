@@ -1,6 +1,7 @@
 .container{
     border: 5px solid black;
     align-items: center;
+    background-color: aliceblue ;
 }
 .search-ISRO{
     border: 1px transparent;
@@ -25,3 +26,6 @@
 .head{
     text-align: center;
 }
+/* tr{
+    padding-top: 10px;
+} */
