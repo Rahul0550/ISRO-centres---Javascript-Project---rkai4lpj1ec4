@@ -1,1 +1,2 @@
 # html-css-js-project-boilerplate
+In this project have fetched the required file from the provided link and then after fetching it applied filter based on conditions like State, Place or name which will filter and have displayed the required/ asked output in a tabular manner; and if any condition is not provided and a blank search is clicked it'll show all the data in proper format from the api into the table.  
