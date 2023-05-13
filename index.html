@@ -19,6 +19,7 @@
         <div class="search-ISRO">
             <h3>Search for ISRO centres based on place, state and name</h4>
         </div>
+        <!-- Search bar and search bar conditons check button -->
         <div class="searchBar">
             <input type="text" name="search" id="search" placeholder="Type here......">
             <button type="submit" onclick="fetchAPIExample()" class="btn btn-primary">Search</button>
@@ -35,12 +36,14 @@
         </div>
         <br><br>
         <div>
+            <!-- Table heading -->
             <table class="table table-hover table-dark">
                 <thead>
                   <th scope="col">CENTER</th>
                   <th scope="col">CITY</th>
                   <th scope="col">STATE</th>
                 </thead>
+                <!-- This is where all the data will be printed -->
                 <tbody id="xmlData" >
                     
                 </tbody>
