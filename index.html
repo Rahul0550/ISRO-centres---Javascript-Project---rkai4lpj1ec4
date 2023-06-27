@@ -22,7 +22,7 @@
         <!-- Search bar and search bar conditons check button -->
         <div class="searchBar">
             <input type="text" name="search" id="search" placeholder="Type here......">
-            <button type="submit" onclick="fetchAPIExample()" class="btn btn-primary">Search</button>
+            <button type="submit" onclick="isroAPI()" class="btn btn-primary">Search</button>
             <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
                 <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
                 <label class="btn btn-outline-primary" for="btncheck1">City</label>
@@ -37,7 +37,7 @@
         <br><br>
         <div>
             <!-- Table heading -->
-            <table class="table table-hover table-dark">
+            <table style="display: none;" id="table" class="table table-hover table-dark" display="none">
                 <thead>
                   <th scope="col">CENTER</th>
                   <th scope="col">CITY</th>

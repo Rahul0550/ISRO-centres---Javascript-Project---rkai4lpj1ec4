@@ -1,6 +1,7 @@
 
-function fetchAPIExample() {
-    
+function isroAPI() {
+    let table = document.getElementById("table");
+    table.style.display = "table";
     let searchText = document.getElementById("search").value.toLowerCase();
     let showCity = document.getElementById("btncheck1").checked;
     let showState = document.getElementById("btncheck2").checked;
