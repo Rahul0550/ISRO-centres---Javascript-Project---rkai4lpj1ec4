@@ -26,6 +26,6 @@
 .head{
     text-align: center;
 }
-/* tr{
-    padding-top: 10px;
-} */
+#xmlData{
+    size: 100%;
+}
